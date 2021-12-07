@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/blog/blog.css" rel="stylesheet">
+	                  <link rel="shortcut icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+        <link rel="icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+<style type="text/css">
+#header.shadow {
+    box-shadow: var(--card_shadow);
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+.wrapper {
+    width: 768px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+}
+#header-widget {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
+}
+#header-widget .widget.Header {
+    justify-content: left;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.w3schools.com/howto/searchicon.png');
+  background-position: 12px 14px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#header-widget #search {
+    width: 100%;
+    margin: auto;
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+input[type=text]:focus {
+  width: 100%;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jumbotron {
+    background-size: cover;
+    padding: 7rem 1rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        padding-left: 1rem;
+}
+.pl-0, .px-0 {
+    padding-left: 0 !important;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0 !important;
+}
+.pt-0, .py-0 {
+    padding-top: 0 !important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+.tofront {
+    position: relative;
+    z-index: 1;
+}
+.h-100 {
+    height: 100% !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.align-self-center {
+    align-self: center !important;
+}
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.rounded {
+    border-radius: 0.25rem !important;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: black;
+}
+.article-headline {
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #222222;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 84%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem; }
+  .badge:empty {
+    display: none; }
+
+.btn .badge {
+  position: relative;
+  top: -1px; }
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem; }
+
+.badge-primary {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-primary[href]:hover, .badge-primary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-secondary {
+  color: #fff;
+  background-color: #7832e2; }
+  .badge-secondary[href]:hover, .badge-secondary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5f1cc5; }
+
+.badge-success {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-success[href]:hover, .badge-success[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-info {
+  color: #212529;
+  background-color: #09ebaf; }
+  .badge-info[href]:hover, .badge-info[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #07ba8a; }
+
+.badge-warning {
+  color: #212529;
+  background-color: #ffde03; }
+  .badge-warning[href]:hover, .badge-warning[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #cfb400; }
+
+.badge-danger {
+  color: #fff;
+  background-color: #ea2f65; }
+  .badge-danger[href]:hover, .badge-danger[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d1154b; }
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa; }
+  .badge-light[href]:hover, .badge-light[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #dae0e5; }
+
+.badge-dark {
+  color: #fff;
+  background-color: #212529; }
+  .badge-dark[href]:hover, .badge-dark[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0a0c0d; }
+
+.badge-white {
+  color: #212529;
+  background-color: #fff; }
+  .badge-white[href]:hover, .badge-white[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #e6e6e6; }
+
+.badge-purple {
+  color: #fff;
+  background-color: #ad6edd; }
+  .badge-purple[href]:hover, .badge-purple[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #9645d3; }
+
+.badge-salmon {
+  color: #212529;
+  background-color: #ff977a; }
+  .badge-salmon[href]:hover, .badge-salmon[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #ff6f47; }
+
+.badge-cyan {
+  color: #212529;
+  background-color: #35bdff; }
+  .badge-cyan[href]:hover, .badge-cyan[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #02acff; }
+
+.badge-gray {
+  color: #212529;
+  background-color: #ced4da; }
+  .badge-gray[href]:hover, .badge-gray[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #b1bbc4; }
+
+.badge-indigo {
+  color: #fff;
+  background-color: #502c6c; }
+  .badge-indigo[href]:hover, .badge-indigo[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #351d48; }
+
+.badge-orange {
+  color: #212529;
+  background-color: #fbb500; }
+  .badge-orange[href]:hover, .badge-orange[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c89000; }
+
+.badge-lightblue {
+  color: #212529;
+  background-color: #e8f3ec; }
+  .badge-lightblue[href]:hover, .badge-lightblue[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c6e2d0; }
+.container {
+	max-width: 1070px;
+}
+.pb-4, .py-4 {
+    padding-bottom: 1.5rem !important;
+}
+.pt-4, .py-4 {
+    padding-top: 1.5rem !important;
+}
+.spanborder {
+    border-bottom: 1px solid #e8f3ec;
+    margin-bottom: 2rem;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+</style>
+	<title>Kunci Jawaban Mtk Kelas 8</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "Nurul Safirah"
+  },
+  "headline": "Kunci Jawaban Mtk Kelas 8",
+  "datePublished": "2021-12-07",
+  "image": "https://1.bp.blogspot.com/-cJ7pevs0I8k/YRTKKcMEp4I/AAAAAAAABmw/mQzOGiYwMAERGtcL3UzbpNkfJTndGkJpACLcBGAsYHQ/w368-h400/kunci-jawaban-matematika-kelas-8-ayo-kita-berlatih-2.1.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zeus News",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=kunci+jawaban+mtk+kelas+8",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+	<!-- Head tag Code --></head>
+<body>
+<!-- header -->
+	<header id="header" class="shadow">
+<div class="wrapper">
+<div class="header-widget section" id="header-widget" name="#header-widget">
+<div class="widget Header" data-version="2" id="Header1">
+<div id="logo">
+<a href="/" title="Zeus News">
+<img alt="Zeus News" src="https://lh3.googleusercontent.com/-QUTJuckOGQw/Yazw2hUZUjI/AAAAAAAAAgk/IUP2mZ3TwQ4Egj3i8jmK8uq7b-hf0ECqACNcBGAsYHQ/w100-h100-p-k-no-nu/logo.png" width="40" height="40">
+</a>
+</div>
+</div>
+<div class="widget Label" data-version="2" id="Label1">
+<div id="search">
+<form action="/" method="get">
+  <input type="text" name="q" placeholder="Search.." aria-label="Search">
+</form>
+			  </div>
+			  </div>
+			  </div>
+			  			  			  <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between" style="background-color:#fff; border-t:1px solid #e5e5e5">
+		    <a class="p-2 text-muted" href="/p/about.html">About</a>
+			<a class="p-2 text-muted" href="/p/contact.html">Contact</a>
+			<a class="p-2 text-muted" href="/p/dmca.html">DMCA</a>
+			<a class="p-2 text-muted" href="/p/privacy-policy.html">Privacy Policy</a>
+			<a class="p-2 text-muted" href="/p/copyright.html">Copyright</a>
+			</nav>
+			</div>
+			  </div>
+			  </header>
+			  <div class="container">
+<div class="row mb-2">
+							<div class="col-sm-12 p-2">
+										<div class="col-md-12 my-2" align="center">
+					<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+				<h1 class="display-4 mb-4 article-headline">Kunci Jawaban Mtk Kelas 8</h1>
+				<div class="d-flex align-items-center">
+											       <small class="ml-3"><b>Written by</b> Nurul Safirah <span class="text-muted d-block mt-1">2021-12-07 · <span class="reading-time">2 min read</span></span></small>
+	                    </div>
+				</div>
+				<div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://lh3.googleusercontent.com/-oNaiH9M46YU/YKz79diPsQI/AAAAAAAABZ4/SEGQNb5KrKcIqxhnayVRgB8J6L4eB3I6QCNcBGAsYHQ/w640-h390/9-min.png" alt="Kunci Jawaban Mtk Kelas 8"
+					style="max-width: 100%;
+					vertical-align: middle;
+border-style: none;">
+                </div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<br/>
+
+	<div class="d-block p-4">
+	<center>
+		<!-- IN ARTICLE ADS -->
+	</center>
+</div>					</div> 
+		  <article>
+						
+		
+	
+	 
+			
+
+	
+										<div class="con" style="
+max-width: 1140px;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+padding-top: 1.5rem !important;">
+<div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+		  <article style="
+		  font-size: 20px;
+line-height: 1.86;
+font-family: Lora;">
+				<p>
+		Kunci Jawaban Mtk Kelas 8 gambar artikel tersedia di website.
+				  Kunci Jawaban Mtk Kelas 8 adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				  Kamu dapat menemukan topik dan Download Kunci Jawaban Mtk Kelas 8 file ini di sini.
+				  Cari dan Temukan gratis Kunci Jawaban Mtk Kelas 8 di Zeus News</p>
+				  <p>
+				  Jika kamu sedang mencari <b>Kunci Jawaban Mtk Kelas 8</b> informasi gambar yang terkait <b>Kunci Jawaban Mtk Kelas 8</b>
+				  dan tertarik. Kamu mengunjungi web yang tepat!. Situs web kami selalu memberi Anda saran untukfferencing konten video dan gambar berkualitas tinggi, silakan berburu dan menemukan artikel dan gambar video yang lebih informatif yang sesuai dengan minat Anda. 
+				  </p>
+	<h4>Kunci Jawaban Mtk Kelas 8</h4>
+
+			
+	<div class="navi text-center">
+					<p align="justify">KPK dari 2 dan 6 adalah. Berilah tanda silang x pada huruf a b c atau d pada jawaban yang paling benar. SOAL UTS Matematika Kelas 11 SMA Semester 1 serta Kunci Jawaban UAS MTK Pilihan Ganda. <br>				
+			</p>
+			</div>
+								<div class="sidebar-recent__title" style="text-decoration: none;  font-size: 25px;">
+	<span style="border-bottom: 1px solid rgba(0,0,0,0.44);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: -1px;"><b>Read also:</b></span>
+</div>
+<p>
+									<a class="badge badge-success" href="/jalan-tikus-edit-video.html">jalan tikus edit video</a>
+											<a class="badge badge-danger" href="/jalan-tikus-video.html">jalan tikus video</a>
+											<a class="badge badge-success" href="/https-belajarkemdikbudgoid-daftar.html">https belajarkemdikbudgoid daftar</a>
+											<a class="badge badge-danger" href="/download-gb-whatsapp-terbaru-2021-apkpure.html">download gb whatsapp terbaru 2021 apkpure</a>
+											<a class="badge badge-light" href="/download-aplikasi-whatsapp-terbaru-2021-untuk-laptop.html">download aplikasi whatsapp terbaru 2021 untuk laptop</a>
+											<a class="badge badge-dark" href="/jawaban-dari-soal-matematika-kelas-5-halaman-48.html">jawaban dari soal matematika kelas 5 halaman 48</a>
+											<a class="badge badge-dark" href="/1000-euro-ke-rupiah.html">1000 euro ke rupiah</a>
+											<a class="badge badge-success" href="/gb-whatsapp-pro-apk-download-2021-apkpure.html">gb whatsapp pro apk download 2021 apkpure</a>
+					</p>
+										<img class="card-img-top v-cover" src="https://id-static.z-dn.net/files/d20/0da2f41e0a9cc07b2ab344b75dfbe84b.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" alt="Kunci Jawaban Matematika Kelas 8 Halaman 70 Uji Kompetensi 2b Bab 2 Koordinat Kartesius Ringtimes Bali">
+					
+					<div class="card-body">
+						<h3 class="h5"><b>Kunci Jawaban Tema 4 Kelas 6 Nah itulah artikel kami terkait 4 Contoh Soal TAP UT PGSD Tugas Akhir Program PDGK4500 Lengkap Dengan Kunci Jawaban jangan lupa untuk berbagi soal ini pada teman-teman Anda yang lainny dengan cara share artikel ini ke sosial media Anda.</b></h3>
+												
+							<p class="p-2" align="justify">
+																	<strong>Kunci jawaban mtk kelas 8</strong>. 
+								
+																	Berilah tanda silang X pada huruf a b c atau d di depan jawaban yang benar. 
+																	Jumat 3 Desember 2021 1914. 
+																	Soal UAS Matematika Kelas 5 Semester 1 plus Kunci Jawaban Khanza Aulia Kelas 5 Kumpulan Soal Soal UAS 49 comments I. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Pembagi dari suatu bilangan disebut A. 
+																	Tanpa panjang lebar lagi berikut ini soal MTK tentang KPK dan FPB kelas 4 SD beserta kunci jawaban. 
+																	Bagi rekan rekan yang mencari contoh dan referensi RPP MTK Kelas 7 SMPMTs K13 1 halaman semester 1 berikut kami bagikan link downloadnya. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Berikut 25 Soal Himpunan Matematika Kelas 7 SMPMTs. 
+																	Inilah soal latihan dan kunci jawaban soal UTSPTS IPS Kelas 8 SMP semester 2 tahun 2021. 
+																	Bank soal atau kumpulan soal ini berisi tentang soal UH ulangan harian UTS Ulangan Tengah Semester UAS Ulangan Akhir Semester UKK Ulangan Kenaikan Kelas UN Ujian Nasional yang sengaja kami berikan secara gratis. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Secepatnya akan kami perbaiki. 
+																	RPP Matematika Revisi 2020 ini dapat anda gunakan untuk kegiatan belajar mengajar dan melengkapi perangkat pembelajaran silahkan download secara gratis pada link yang kami sediakan di bawah ini. 
+																	Pada kesempatan ini kami berbagi kunci jawaban untuk soal-soal latihan dan uji kompetensi di buku pelajaran siswa yang mungkin saja menjadi tugas sekolah teman-teman. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Kunci jawaban soal-soal PPKn kelas 10 Pendidikan Pancasilan dan Kewarganegaraan buku siswa kurikulum 2013 revisi 2017. 
+																	Faktor persekutuan 8 dan 18 adalah. 
+																	Soal Pilihan Ganda KPK dan FPB 1. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Bentuk soal pilihan ganda. 
+																	25 Soal IPS SMP Tentang Lembaga Sosial Kunci Jawaban kelas VII by endifebrianto in Types School Work ips and terpadu. 
+																	Soal dilengkapi kunci jawaban dan pembahasan mendetail. 
+															</p>
+											</div> 
+					</article>
+				</div>
+				</div>
+		 
+	 
+					
+	<div class="container pt-4 pb-4">
+    <!--ads/auto.txt-->
+    <h5 class="font-weight-bold spanborder"><span style="    border-bottom: 1px solid rgba(0,0,0,0.44);
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: -1px;">Read More</span></h5>
+	<div class="row" style="display: flex;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;">
+        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kunci-jawaban-mtk-kelas-8.html"><img src="https://1.bp.blogspot.com/-TJWsNY98UJY/YLGMkugb1yI/AAAAAAAAE_g/3pACaLUPHeUm7CmWTxowJ5_VV83A-Y_JACLcBGAsYHQ/w400-h319/Kunci-Jawaban-Matematika-Kelas-8-Ayo-Kita-Berlatih-1.4-Halaman-22-23.webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kunci-jawaban-mtk-kelas-8.html" alt="Download Whatsapp Business Mod Terbaru 2021">Kunci Jawaban Mtk Kelas 8</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kunci-jawaban-mtk-kelas-8.html"><img src="https://1.bp.blogspot.com/-oC_aRXEFGh4/YVFOnOggLjI/AAAAAAAAKVQ/rtdrOYGMLqoy69RP1rGRrr5Ae8g-3ryNQCLcBGAsYHQ/s644/5.%2BSoal%2B%2526%2BJawaban%2BPAS%2BKelas%2B8%2BSemester%2B1%2BMatematika%2B2021-2022.PNG" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kunci-jawaban-mtk-kelas-8.html" alt="Peringkat Indonesia Sepak Bola">Kunci Jawaban Mtk Kelas 8</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kunci-jawaban-mtk-kelas-8.html"><img src="https://lh3.googleusercontent.com/-_XaJyFSZYcU/YKMtqXk5CNI/AAAAAAAAEQ0/Kfl_eOWJAiI3Io-GiXySEfof-80QF_bRQCLcBGAsYHQ/s16000/Kunci%2BJawaban%2BMatematika%2BKelas%2B8%2BSemester%2B1.webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kunci-jawaban-mtk-kelas-8.html" alt="Web Latihan Soal Akm">Kunci Jawaban Mtk Kelas 8</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kunci-jawaban-mtk-kelas-8.html"><img src="https://dosenpintar.com/wp-content/uploads/2020/12/Soal-Matematika-Kelas-8.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kunci-jawaban-mtk-kelas-8.html" alt="Setting Gb Wa Bahasa Indonesia">Kunci Jawaban Mtk Kelas 8</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				</div>
+</div>
+</div>
+	</div>
+
+
+						</article>
+						</div>
+				
+<!-- sidebar -->
+
+		<!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+		</div>	
+<footer class="blog-footer">
+				<div class="col-md-12 text-center">
+			<a href="/">Zeus News</a> Copyright 2022
+			<p>Developed by. Anak Kembar</p>
+				</div>
+			</footer>
+		
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<center>
+    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4610097,4,107,170,20,00011000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4610097&101" alt="web page hit counter" border="0"></a></noscript>
+<!-- Histats.com  END  --> </center>	
+		<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $('body').addClass('xepo_ads');
+		});
+
+		$(document).on('click','.xepo_ads',function(e)
+		{
+		    $(this).removeClass('xepo_ads');
+		    window.open('https://affairsmithbloke.com/fxuqmwvy91?key=e840e938813350bc4bfe6916b8475137', '_blank');
+		});
+	</script>
+	
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function()
+	    {
+			$(document).on('click','#image-download',function(e)
+			{
+				e.preventDefault();
+				var url = $(this).data('url');
+				var title = $(this).data('title');			
+				var x=new XMLHttpRequest();
+				x.open( "GET", url , true);
+				x.responseType="blob";
+				x.onload= function(e){download(e.target.response, title, "image/jpg");};
+				x.send();
+			});
+	    });
+	</script>
+		<script type='text/javascript' src='//affairsmithbloke.com/6c/92/a0/6c92a0d5d0774d5ef72ef42731cff37d.js'></script>
+	    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. <strong><a href="privacy-policy.html">Learn More</a</strong>,
+            "dismiss": "Accept",
+            "learnMore": "More Information",
+            "theme": "dark-bottom"
+        };
+    </script>
+	<script>
+	//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}</script>
+</body>
+</html>

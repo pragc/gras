@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/blog/blog.css" rel="stylesheet">
+	                  <link rel="shortcut icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+        <link rel="icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+<style type="text/css">
+#header.shadow {
+    box-shadow: var(--card_shadow);
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+.wrapper {
+    width: 768px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+}
+#header-widget {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
+}
+#header-widget .widget.Header {
+    justify-content: left;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.w3schools.com/howto/searchicon.png');
+  background-position: 12px 14px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#header-widget #search {
+    width: 100%;
+    margin: auto;
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+input[type=text]:focus {
+  width: 100%;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jumbotron {
+    background-size: cover;
+    padding: 7rem 1rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        padding-left: 1rem;
+}
+.pl-0, .px-0 {
+    padding-left: 0 !important;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0 !important;
+}
+.pt-0, .py-0 {
+    padding-top: 0 !important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+.tofront {
+    position: relative;
+    z-index: 1;
+}
+.h-100 {
+    height: 100% !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.align-self-center {
+    align-self: center !important;
+}
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.rounded {
+    border-radius: 0.25rem !important;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: black;
+}
+.article-headline {
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #222222;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 84%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem; }
+  .badge:empty {
+    display: none; }
+
+.btn .badge {
+  position: relative;
+  top: -1px; }
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem; }
+
+.badge-primary {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-primary[href]:hover, .badge-primary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-secondary {
+  color: #fff;
+  background-color: #7832e2; }
+  .badge-secondary[href]:hover, .badge-secondary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5f1cc5; }
+
+.badge-success {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-success[href]:hover, .badge-success[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-info {
+  color: #212529;
+  background-color: #09ebaf; }
+  .badge-info[href]:hover, .badge-info[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #07ba8a; }
+
+.badge-warning {
+  color: #212529;
+  background-color: #ffde03; }
+  .badge-warning[href]:hover, .badge-warning[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #cfb400; }
+
+.badge-danger {
+  color: #fff;
+  background-color: #ea2f65; }
+  .badge-danger[href]:hover, .badge-danger[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d1154b; }
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa; }
+  .badge-light[href]:hover, .badge-light[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #dae0e5; }
+
+.badge-dark {
+  color: #fff;
+  background-color: #212529; }
+  .badge-dark[href]:hover, .badge-dark[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0a0c0d; }
+
+.badge-white {
+  color: #212529;
+  background-color: #fff; }
+  .badge-white[href]:hover, .badge-white[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #e6e6e6; }
+
+.badge-purple {
+  color: #fff;
+  background-color: #ad6edd; }
+  .badge-purple[href]:hover, .badge-purple[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #9645d3; }
+
+.badge-salmon {
+  color: #212529;
+  background-color: #ff977a; }
+  .badge-salmon[href]:hover, .badge-salmon[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #ff6f47; }
+
+.badge-cyan {
+  color: #212529;
+  background-color: #35bdff; }
+  .badge-cyan[href]:hover, .badge-cyan[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #02acff; }
+
+.badge-gray {
+  color: #212529;
+  background-color: #ced4da; }
+  .badge-gray[href]:hover, .badge-gray[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #b1bbc4; }
+
+.badge-indigo {
+  color: #fff;
+  background-color: #502c6c; }
+  .badge-indigo[href]:hover, .badge-indigo[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #351d48; }
+
+.badge-orange {
+  color: #212529;
+  background-color: #fbb500; }
+  .badge-orange[href]:hover, .badge-orange[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c89000; }
+
+.badge-lightblue {
+  color: #212529;
+  background-color: #e8f3ec; }
+  .badge-lightblue[href]:hover, .badge-lightblue[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c6e2d0; }
+.container {
+	max-width: 1070px;
+}
+.pb-4, .py-4 {
+    padding-bottom: 1.5rem !important;
+}
+.pt-4, .py-4 {
+    padding-top: 1.5rem !important;
+}
+.spanborder {
+    border-bottom: 1px solid #e8f3ec;
+    margin-bottom: 2rem;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+</style>
+	<title>Kurs Dollar</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "Nurul Safirah"
+  },
+  "headline": "Kurs Dollar",
+  "datePublished": "2021-12-07",
+  "image": "https://statik.tempo.co/data/2015/08/28/id_431874/431874_620.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zeus News",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=kurs+dollar",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+	<!-- Head tag Code --></head>
+<body>
+<!-- header -->
+	<header id="header" class="shadow">
+<div class="wrapper">
+<div class="header-widget section" id="header-widget" name="#header-widget">
+<div class="widget Header" data-version="2" id="Header1">
+<div id="logo">
+<a href="/" title="Zeus News">
+<img alt="Zeus News" src="https://lh3.googleusercontent.com/-QUTJuckOGQw/Yazw2hUZUjI/AAAAAAAAAgk/IUP2mZ3TwQ4Egj3i8jmK8uq7b-hf0ECqACNcBGAsYHQ/w100-h100-p-k-no-nu/logo.png" width="40" height="40">
+</a>
+</div>
+</div>
+<div class="widget Label" data-version="2" id="Label1">
+<div id="search">
+<form action="/" method="get">
+  <input type="text" name="q" placeholder="Search.." aria-label="Search">
+</form>
+			  </div>
+			  </div>
+			  </div>
+			  			  			  <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between" style="background-color:#fff; border-t:1px solid #e5e5e5">
+		    <a class="p-2 text-muted" href="/p/about.html">About</a>
+			<a class="p-2 text-muted" href="/p/contact.html">Contact</a>
+			<a class="p-2 text-muted" href="/p/dmca.html">DMCA</a>
+			<a class="p-2 text-muted" href="/p/privacy-policy.html">Privacy Policy</a>
+			<a class="p-2 text-muted" href="/p/copyright.html">Copyright</a>
+			</nav>
+			</div>
+			  </div>
+			  </header>
+			  <div class="container">
+<div class="row mb-2">
+							<div class="col-sm-12 p-2">
+										<div class="col-md-12 my-2" align="center">
+					<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+				<h1 class="display-4 mb-4 article-headline">Kurs Dollar</h1>
+				<div class="d-flex align-items-center">
+											       <small class="ml-3"><b>Written by</b> Nurul Safirah <span class="text-muted d-block mt-1">2021-12-07 · <span class="reading-time">2 min read</span></span></small>
+	                    </div>
+				</div>
+				<div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://www.medialnews.com/wp-content/uploads/2021/04/1385713870p.jpg" alt="Kurs Dollar"
+					style="max-width: 100%;
+					vertical-align: middle;
+border-style: none;">
+                </div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<br/>
+
+	<div class="d-block p-4">
+	<center>
+		<!-- IN ARTICLE ADS -->
+	</center>
+</div>					</div> 
+		  <article>
+						
+		
+	
+	 
+			
+
+	
+										<div class="con" style="
+max-width: 1140px;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+padding-top: 1.5rem !important;">
+<div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+		  <article style="
+		  font-size: 20px;
+line-height: 1.86;
+font-family: Lora;">
+				<p>
+		Kurs Dollar gambar artikel tersedia di website.
+				  Kurs Dollar adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				  Kamu dapat menemukan topik dan Download Kurs Dollar file ini di sini.
+				  Cari dan Temukan gratis Kurs Dollar di Zeus News</p>
+				  <p>
+				  Jika kamu sedang mencari <b>Kurs Dollar</b> informasi gambar yang terkait <b>Kurs Dollar</b>
+				  dan tertarik. Kamu mengunjungi web yang tepat!. Situs web kami selalu memberi Anda saran untukfferencing konten video dan gambar berkualitas tinggi, silakan berburu dan menemukan artikel dan gambar video yang lebih informatif yang sesuai dengan minat Anda. 
+				  </p>
+	<h4>Kurs Dollar</h4>
+
+			
+	<div class="navi text-center">
+					<p align="justify">Das aktuelle CoinMarketCap-Ranking ist 272 mit einer Marktkapitalisierung von 236004499 EUR. Indonesian Rupiah Exchange Rate. Kurs Dollar hari ini. <br>				
+			</p>
+			</div>
+								<div class="sidebar-recent__title" style="text-decoration: none;  font-size: 25px;">
+	<span style="border-bottom: 1px solid rgba(0,0,0,0.44);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: -1px;"><b>Read also:</b></span>
+</div>
+<p>
+									<a class="badge badge-secondary" href="/bahasa-indonesia.html">bahasa indonesia</a>
+											<a class="badge badge-primary" href="/https-belajarkemdikbudgoid-daftar.html">https belajarkemdikbudgoid daftar</a>
+											<a class="badge badge-success" href="/download-whatsapp-mod-terbaru-2021-apkpure.html">download whatsapp mod terbaru 2021 apkpure</a>
+											<a class="badge badge-info" href="/jalan-tikus-video.html">jalan tikus video</a>
+											<a class="badge badge-danger" href="/jalan-tikus-video-converter.html">jalan tikus video converter</a>
+											<a class="badge badge-info" href="/download-whatsapp-fouad-mods-terbaru-2021.html">download whatsapp fouad mods terbaru 2021</a>
+											<a class="badge badge-info" href="/cara-download-film-jalan-tikus.html">cara download film jalan tikus</a>
+											<a class="badge badge-danger" href="/gb-whatsapp-pro-apk-download-2021-android.html">gb whatsapp pro apk download 2021 android</a>
+					</p>
+										<img class="card-img-top v-cover" src="https://cdn-2.tstatic.net/banjarmasin/foto/bank/images/tagar-rupiah-longsor-jokowi-lengser-trending-topic-nomor-2-di-twitter_20180905_164201.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" alt="News Kurs Dollar Steemit">
+					
+					<div class="card-body">
+						<h3 class="h5"><b>14306111444989 Mandiri.</b></h3>
+												
+							<p class="p-2" align="justify">
+																	<strong>Kurs dollar</strong>. 
+								
+																	Directory of best currency transfer providers compare to exchange rates when sending money from Indonesia. 
+																	14239001453900 BNI. 
+																	Ethereum-Kurs und Marktdaten Ethereum-Kurs für heute ist 413235 mit einem 24-stündigen Handelsvolumen von 41690375533. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Wir aktualisieren unseren XCH-zu-EUR-Kurs in Echtzeit. 
+																	Several countries use the US. 
+																	Monthly Average Converter US Dollar per 1 British Pound Monthly average averageYear 2021 2020 2019 2018 2017 2016 2015 2014 2013 2012 2011 Graph is being loaded. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Der Chia Network-Preis heute liegt bei. 
+																	ETH-Kurs ist um -08 gefallen in den letzten 24 Stunden. 
+																	Track Rupiah forex rate changes track Rupiah historical changes. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	USD US Dollar Country United States of America Region North America Sub-Unit 1 Dollar 100 cents Symbol US The US. 
+																	Info kurs rupiah terhadap USD EUReuro poundsterling ringgit yen yuan riyal SGDsingapore dollar HKDhongkong dollar valuta asing update harga emas dan. 
+																	Dollar as their official currency and many others allow it to be used in a de facto capacity. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Indonesian Rupiah Exchange Rate. 
+																	Sabtu 04 Desember 2021. 
+																	Indonesian Rupiah exchange rates and currency conversion. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Es gibt einen umlaufenden Vorrat von 19 Millionen BTC Kryptowährungen und einen Gesamtvorrat von 21 Millionen. 
+																	9567 EUR mit einem 24-Stunden-Handelsvolumen von 33878686 EUR. 
+																	1 Satoshi 000000001 10 Satoshi 000000010 100 Satoshi 000000100 1 Bit μBTC you-bit 1000 Satoshi 000001000 10000 Satoshi. 
+															</p>
+											</div> 
+					</article>
+				</div>
+				</div>
+		 
+	 
+					
+	<div class="container pt-4 pb-4">
+    <!--ads/auto.txt-->
+    <h5 class="font-weight-bold spanborder"><span style="    border-bottom: 1px solid rgba(0,0,0,0.44);
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: -1px;">Read More</span></h5>
+	<div class="row" style="display: flex;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;">
+        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kurs-dollar.html"><img src="https://steemitimages.com/640x0/https://img.esteem.ws/lkdo912yu1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kurs-dollar.html" alt="Letak Wilayah Indonesia">Kurs Dollar</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kurs-dollar.html"><img src="https://kurs-dollara.net/images/kurs_dollara.gif" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kurs-dollar.html" alt="Latihan Soal Matematika Kelas 9">Kurs Dollar</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kurs-dollar.html"><img src="https://www.jatikom.com/wp-content/uploads/2016/02/kurs-dollar-hari-ini-dan-pengertian-kurs-300x168.jpeg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kurs-dollar.html" alt="Gunung Semeru">Kurs Dollar</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/kurs-dollar.html"><img src="https://i.ytimg.com/vi/pFKoydjPu_w/hqdefault.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kurs-dollar.html" alt="How To Say Indonesia">Kurs Dollar</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				</div>
+</div>
+</div>
+	</div>
+
+
+						</article>
+						</div>
+				
+<!-- sidebar -->
+
+		<!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+		</div>	
+<footer class="blog-footer">
+				<div class="col-md-12 text-center">
+			<a href="/">Zeus News</a> Copyright 2022
+			<p>Developed by. Anak Kembar</p>
+				</div>
+			</footer>
+		
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<center>
+    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4610097,4,107,170,20,00011000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4610097&101" alt="web page hit counter" border="0"></a></noscript>
+<!-- Histats.com  END  --> </center>	
+		<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $('body').addClass('xepo_ads');
+		});
+
+		$(document).on('click','.xepo_ads',function(e)
+		{
+		    $(this).removeClass('xepo_ads');
+		    window.open('https://affairsmithbloke.com/fxuqmwvy91?key=e840e938813350bc4bfe6916b8475137', '_blank');
+		});
+	</script>
+	
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function()
+	    {
+			$(document).on('click','#image-download',function(e)
+			{
+				e.preventDefault();
+				var url = $(this).data('url');
+				var title = $(this).data('title');			
+				var x=new XMLHttpRequest();
+				x.open( "GET", url , true);
+				x.responseType="blob";
+				x.onload= function(e){download(e.target.response, title, "image/jpg");};
+				x.send();
+			});
+	    });
+	</script>
+		<script type='text/javascript' src='//affairsmithbloke.com/6c/92/a0/6c92a0d5d0774d5ef72ef42731cff37d.js'></script>
+	    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. <strong><a href="privacy-policy.html">Learn More</a</strong>,
+            "dismiss": "Accept",
+            "learnMore": "More Information",
+            "theme": "dark-bottom"
+        };
+    </script>
+	<script>
+	//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}</script>
+</body>
+</html>

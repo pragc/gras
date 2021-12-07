@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/blog/blog.css" rel="stylesheet">
+	                  <link rel="shortcut icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+        <link rel="icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+<style type="text/css">
+#header.shadow {
+    box-shadow: var(--card_shadow);
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+.wrapper {
+    width: 768px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+}
+#header-widget {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
+}
+#header-widget .widget.Header {
+    justify-content: left;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.w3schools.com/howto/searchicon.png');
+  background-position: 12px 14px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#header-widget #search {
+    width: 100%;
+    margin: auto;
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+input[type=text]:focus {
+  width: 100%;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jumbotron {
+    background-size: cover;
+    padding: 7rem 1rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        padding-left: 1rem;
+}
+.pl-0, .px-0 {
+    padding-left: 0 !important;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0 !important;
+}
+.pt-0, .py-0 {
+    padding-top: 0 !important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+.tofront {
+    position: relative;
+    z-index: 1;
+}
+.h-100 {
+    height: 100% !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.align-self-center {
+    align-self: center !important;
+}
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.rounded {
+    border-radius: 0.25rem !important;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: black;
+}
+.article-headline {
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #222222;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 84%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem; }
+  .badge:empty {
+    display: none; }
+
+.btn .badge {
+  position: relative;
+  top: -1px; }
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem; }
+
+.badge-primary {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-primary[href]:hover, .badge-primary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-secondary {
+  color: #fff;
+  background-color: #7832e2; }
+  .badge-secondary[href]:hover, .badge-secondary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5f1cc5; }
+
+.badge-success {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-success[href]:hover, .badge-success[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-info {
+  color: #212529;
+  background-color: #09ebaf; }
+  .badge-info[href]:hover, .badge-info[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #07ba8a; }
+
+.badge-warning {
+  color: #212529;
+  background-color: #ffde03; }
+  .badge-warning[href]:hover, .badge-warning[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #cfb400; }
+
+.badge-danger {
+  color: #fff;
+  background-color: #ea2f65; }
+  .badge-danger[href]:hover, .badge-danger[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d1154b; }
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa; }
+  .badge-light[href]:hover, .badge-light[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #dae0e5; }
+
+.badge-dark {
+  color: #fff;
+  background-color: #212529; }
+  .badge-dark[href]:hover, .badge-dark[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0a0c0d; }
+
+.badge-white {
+  color: #212529;
+  background-color: #fff; }
+  .badge-white[href]:hover, .badge-white[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #e6e6e6; }
+
+.badge-purple {
+  color: #fff;
+  background-color: #ad6edd; }
+  .badge-purple[href]:hover, .badge-purple[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #9645d3; }
+
+.badge-salmon {
+  color: #212529;
+  background-color: #ff977a; }
+  .badge-salmon[href]:hover, .badge-salmon[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #ff6f47; }
+
+.badge-cyan {
+  color: #212529;
+  background-color: #35bdff; }
+  .badge-cyan[href]:hover, .badge-cyan[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #02acff; }
+
+.badge-gray {
+  color: #212529;
+  background-color: #ced4da; }
+  .badge-gray[href]:hover, .badge-gray[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #b1bbc4; }
+
+.badge-indigo {
+  color: #fff;
+  background-color: #502c6c; }
+  .badge-indigo[href]:hover, .badge-indigo[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #351d48; }
+
+.badge-orange {
+  color: #212529;
+  background-color: #fbb500; }
+  .badge-orange[href]:hover, .badge-orange[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c89000; }
+
+.badge-lightblue {
+  color: #212529;
+  background-color: #e8f3ec; }
+  .badge-lightblue[href]:hover, .badge-lightblue[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c6e2d0; }
+.container {
+	max-width: 1070px;
+}
+.pb-4, .py-4 {
+    padding-bottom: 1.5rem !important;
+}
+.pt-4, .py-4 {
+    padding-top: 1.5rem !important;
+}
+.spanborder {
+    border-bottom: 1px solid #e8f3ec;
+    margin-bottom: 2rem;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+</style>
+	<title>Latihan Soal Olimpiade Biologi Sma Online</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "Nurul Safirah"
+  },
+  "headline": "Latihan Soal Olimpiade Biologi Sma Online",
+  "datePublished": "2021-12-07",
+  "image": "https://cf.shopee.co.id/file/5ca5779486654b400c94a588b11ebd4f",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zeus News",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=latihan+soal+olimpiade+biologi+sma+online",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+	<!-- Head tag Code --></head>
+<body>
+<!-- header -->
+	<header id="header" class="shadow">
+<div class="wrapper">
+<div class="header-widget section" id="header-widget" name="#header-widget">
+<div class="widget Header" data-version="2" id="Header1">
+<div id="logo">
+<a href="/" title="Zeus News">
+<img alt="Zeus News" src="https://lh3.googleusercontent.com/-QUTJuckOGQw/Yazw2hUZUjI/AAAAAAAAAgk/IUP2mZ3TwQ4Egj3i8jmK8uq7b-hf0ECqACNcBGAsYHQ/w100-h100-p-k-no-nu/logo.png" width="40" height="40">
+</a>
+</div>
+</div>
+<div class="widget Label" data-version="2" id="Label1">
+<div id="search">
+<form action="/" method="get">
+  <input type="text" name="q" placeholder="Search.." aria-label="Search">
+</form>
+			  </div>
+			  </div>
+			  </div>
+			  			  			  <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between" style="background-color:#fff; border-t:1px solid #e5e5e5">
+		    <a class="p-2 text-muted" href="/p/about.html">About</a>
+			<a class="p-2 text-muted" href="/p/contact.html">Contact</a>
+			<a class="p-2 text-muted" href="/p/dmca.html">DMCA</a>
+			<a class="p-2 text-muted" href="/p/privacy-policy.html">Privacy Policy</a>
+			<a class="p-2 text-muted" href="/p/copyright.html">Copyright</a>
+			</nav>
+			</div>
+			  </div>
+			  </header>
+			  <div class="container">
+<div class="row mb-2">
+							<div class="col-sm-12 p-2">
+										<div class="col-md-12 my-2" align="center">
+					<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+				<h1 class="display-4 mb-4 article-headline">Latihan Soal Olimpiade Biologi Sma Online</h1>
+				<div class="d-flex align-items-center">
+											       <small class="ml-3"><b>Written by</b> Nurul Safirah <span class="text-muted d-block mt-1">2021-12-07 · <span class="reading-time">2 min read</span></span></small>
+	                    </div>
+				</div>
+				<div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/12/4/batch-upload/batch-upload_c055e31b-153f-4044-bb3c-f3d7e5f3d703" alt="Latihan Soal Olimpiade Biologi Sma Online"
+					style="max-width: 100%;
+					vertical-align: middle;
+border-style: none;">
+                </div>
+				</div>
+				</div>
+				</div>
+				</div>
+				<br/>
+
+	<div class="d-block p-4">
+	<center>
+		<!-- IN ARTICLE ADS -->
+	</center>
+</div>					</div> 
+		  <article>
+						
+		
+	
+	 
+			
+
+	
+										<div class="con" style="
+max-width: 1140px;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+padding-top: 1.5rem !important;">
+<div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+		  <article style="
+		  font-size: 20px;
+line-height: 1.86;
+font-family: Lora;">
+				<p>
+		Latihan Soal Olimpiade Biologi Sma Online gambar artikel tersedia di website.
+				  Latihan Soal Olimpiade Biologi Sma Online adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				  Kamu dapat menemukan topik dan Download Latihan Soal Olimpiade Biologi Sma Online file ini di sini.
+				  Cari dan Temukan gratis Latihan Soal Olimpiade Biologi Sma Online di Zeus News</p>
+				  <p>
+				  Jika kamu sedang mencari <b>Latihan Soal Olimpiade Biologi Sma Online</b> informasi gambar yang terkait <b>Latihan Soal Olimpiade Biologi Sma Online</b>
+				  dan tertarik. Kamu mengunjungi web yang tepat!. Situs web kami selalu memberi Anda saran untukfferencing konten video dan gambar berkualitas tinggi, silakan berburu dan menemukan artikel dan gambar video yang lebih informatif yang sesuai dengan minat Anda. 
+				  </p>
+	<h4>Latihan Soal Olimpiade Biologi Sma Online</h4>
+
+			
+	<div class="navi text-center">
+					<p align="justify">SMA Kelas 12 - Biologi - Tryout USBN. Berikut penulis mencoba berbagi file soal-soal HOTS Kimia Kelas X XI dan XII yang merupakan soal HOTS yang penulis peroleh dari kiriman teman sesama guru. Peserta merupakan siswa-siswi SMAsederajat. <br>				
+			</p>
+			</div>
+								<div class="sidebar-recent__title" style="text-decoration: none;  font-size: 25px;">
+	<span style="border-bottom: 1px solid rgba(0,0,0,0.44);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: -1px;"><b>Read also:</b></span>
+</div>
+<p>
+									<a class="badge badge-danger" href="/latihan-soal-matematika-kelas-4-semester-1.html">latihan soal matematika kelas 4 semester 1</a>
+											<a class="badge badge-light" href="/kunci-jawaban-soal-zenius.html">kunci jawaban soal zenius</a>
+											<a class="badge badge-warning" href="/wa-gb-pro-v1200.html">wa gb pro v1200</a>
+											<a class="badge badge-danger" href="/latihan-soal-matematika-kelas-4.html">latihan soal matematika kelas 4</a>
+											<a class="badge badge-danger" href="/latihan-soal-smp-kelas-9-matematika.html">latihan soal smp kelas 9 matematika</a>
+											<a class="badge badge-secondary" href="/rumah-belajar-muallimaat.html">rumah belajar muallimaat</a>
+											<a class="badge badge-light" href="/snaptube-apk-jalan-tikus.html">snaptube apk jalan tikus</a>
+											<a class="badge badge-danger" href="/latihan-soal-matematika-kelas-7-semester-1.html">latihan soal matematika kelas 7 semester 1</a>
+					</p>
+										<img class="card-img-top v-cover" src="https://4.bp.blogspot.com/-G8P9jDRMDXs/WLq8GaOmiUI/AAAAAAAACnc/H8uGBX2C7esgt43kP6bMGp-lZSwBsSGLACLcB/s1600/Contoh%2BSoal%2BOSN%2BTI%2BSMA.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" alt="Soal Soal Oiimpiade Biologi Sma Pdf">
+					
+					<div class="card-body">
+						<h3 class="h5"><b>Ada perbedaan bentuk soal antara bentuk soal UN dengan bentuk soal AKMBerkaitan dengan pelaksanaan Asesmen Kompetensi Minimum hari Rabu tanggal 26 Februari 2020 silahkan mengerjakan latihan soal AKM di bawah ini.</b></h3>
+												
+							<p class="p-2" align="justify">
+																	<strong>Latihan soal olimpiade biologi sma online</strong>. 
+								
+																	Bimbel Jakarta Timur Edukasi Majalah Quanta Bimbingan Belajar Ilmu Pengetahuan inspirasi islami psikologi anak dan Kursus Komputer Diutamakan soal-soal Pembahasan dan Jawaban yang berhubungan dengan pelajaran-pelajaran sekolah Terdiri dari pelajaran-pelajaran Matematika Fisika Kimia Biologi dan ilmu komputer untuk Sekolah Dasar Sekolah Menengah Pertama Sekolah Menengah Atas Kelas. 
+																	Kisi kisi biologi ujian nasional 2014 sma. 
+																	Download Pembahasan Soal Olimpiade Sains Nasional Kabupaten Provinsi dan kumpulan soal Ujian Nasional Berbasis Komputer Kimia Kelas X XI XII Kurikulum2013. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Soal un biologi 2013. 
+																	Website ini hadir dalam rangka ikut berpartisipasi dalam misi mencerdaskan manusia Indonesia. 
+																	Latihan Soal Online adalah website yang berisi tentang latihan soal mulai dari soal SD MI Sederajat SMP MTs sederajat SMA MA Sederajat hingga umum. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	BONUS Soal-Soal Latihan dan Ringkasan Materi Bisa Konsultasi di Luar Jadwal Kursus lewat chat Whatsapp BONUS SMARRT Gold Member UTBK. 
+																	Kisi kisi osn biologi sma 2020 latihan soal olimpiade biologi sma online lomba biologi sma 2019 materi olimpiade biologi sma 2019 materi olimpiade biologi sma ppt osn biologi 2011. 
+																	Soal ujian nasional kelas 12 ipa biologi latihan 1. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	02 Jan 19 1156 AM SMA Kelas 12 - Biologi - Tryout USBN Daftar Soal. 
+																	Latihan ujian nasional kelas xii ipa sma. 
+																	Skl 10 - bioteknologi. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Akses 2500 video konsep dan soal pembahasan materi sekolah kelas 6-12 matematika wajib matematika peminatan fisika dan kimia biologi TPA soshum bahasa inggris bahasa indonesia. 
+																	Satu tim beranggotakan maksimal tiga siswasiswi dari sekolah yang sama. 
+																	Soal HOTS di era revolusi industri 40 sudah menjadi tuntutan kurikulum dan menjadi soal-soal yang diujikan pada Ujian Nasional UTBK SBMPTN Olimpiade-olimpiade dan ujian-ujian sejenisnya. 
+															</p>
+												
+							<p class="p-2" align="justify">
+								
+																	Soal un biologi tahun kemarin. 
+																	46 Waktu mengerjakan. 
+																	Download Soal AKM 2021 Semua Mata Pelajaran SMA PDF DOC UN 2021 Dihapus sebagai pengganti adalah AKM atau Asesmen Kompetensi Minimum. 
+															</p>
+											</div> 
+					</article>
+				</div>
+				</div>
+		 
+	 
+					
+	<div class="container pt-4 pb-4">
+    <!--ads/auto.txt-->
+    <h5 class="font-weight-bold spanborder"><span style="    border-bottom: 1px solid rgba(0,0,0,0.44);
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: -1px;">Read More</span></h5>
+	<div class="row" style="display: flex;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;">
+        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/latihan-soal-olimpiade-biologi-sma-online.html"><img src="https://2.bp.blogspot.com/-XzBYFDxW7zU/XAI2cdbdlvI/AAAAAAAACLM/uIxP4zL6hfcDgitqXxV8MewDbzGMsddigCPcBGAYYCw/w1200-h630-p-k-no-nu/Logo_OSN_baru.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/latihan-soal-olimpiade-biologi-sma-online.html" alt="Jawaban Soal Bahasa Indonesia Kelas 9 Halaman 61">Latihan Soal Olimpiade Biologi Sma Online</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/latihan-soal-olimpiade-biologi-sma-online.html"><img src="https://rukim.id/wp-content/uploads/2020/03/Download-Prediksi-Soal-Pembahasan-KSN-OSN-Biologi-PDF.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/latihan-soal-olimpiade-biologi-sma-online.html" alt="Latihan Soal Utbk Gratis">Latihan Soal Olimpiade Biologi Sma Online</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/latihan-soal-olimpiade-biologi-sma-online.html"><img src="https://id-live-05.slatic.net/p/81f31be16de8ea0b6822e9b4e5813c14.jpg_720x720q80.jpg_.webp" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/latihan-soal-olimpiade-biologi-sma-online.html" alt="Wa Gb Pro Terbaru 2021">Latihan Soal Olimpiade Biologi Sma Online</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				        <div class="col-lg-6" style="flex: 0 0 50%;
+max-width: 50%;">
+			<div class="mb-3 d-flex align-items-center">
+		<a href="/latihan-soal-olimpiade-biologi-sma-online.html"><img src="https://reader015.docslide.net/reader015/html5/20170804/547099e3b4af9fa30a8b481a/bg1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_l3eQ5xwiPy07kGEXjmjgmBKBRB7H2mRxCGhv1tFWg5c_mWT';" height="80"></a>
+		<div class="pl-3" style="padding-left: 1rem !important;">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/latihan-soal-olimpiade-biologi-sma-online.html" alt="Web Latihan Soal Online">Latihan Soal Olimpiade Biologi Sma Online</a></h2>
+						<small class="text-muted">· 2021-12-07</small>
+						</div>
+						</div>
+						</div>
+				</div>
+</div>
+</div>
+	</div>
+
+
+						</article>
+						</div>
+				
+<!-- sidebar -->
+
+		<!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+		</div>	
+<footer class="blog-footer">
+				<div class="col-md-12 text-center">
+			<a href="/">Zeus News</a> Copyright 2022
+			<p>Developed by. Anak Kembar</p>
+				</div>
+			</footer>
+		
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<center>
+    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4610097,4,107,170,20,00011000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4610097&101" alt="web page hit counter" border="0"></a></noscript>
+<!-- Histats.com  END  --> </center>	
+		<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $('body').addClass('xepo_ads');
+		});
+
+		$(document).on('click','.xepo_ads',function(e)
+		{
+		    $(this).removeClass('xepo_ads');
+		    window.open('https://affairsmithbloke.com/fxuqmwvy91?key=e840e938813350bc4bfe6916b8475137', '_blank');
+		});
+	</script>
+	
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function()
+	    {
+			$(document).on('click','#image-download',function(e)
+			{
+				e.preventDefault();
+				var url = $(this).data('url');
+				var title = $(this).data('title');			
+				var x=new XMLHttpRequest();
+				x.open( "GET", url , true);
+				x.responseType="blob";
+				x.onload= function(e){download(e.target.response, title, "image/jpg");};
+				x.send();
+			});
+	    });
+	</script>
+		<script type='text/javascript' src='//affairsmithbloke.com/6c/92/a0/6c92a0d5d0774d5ef72ef42731cff37d.js'></script>
+	    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. <strong><a href="privacy-policy.html">Learn More</a</strong>,
+            "dismiss": "Accept",
+            "learnMore": "More Information",
+            "theme": "dark-bottom"
+        };
+    </script>
+	<script>
+	//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}</script>
+</body>
+</html>

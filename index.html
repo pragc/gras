@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/blog/blog.css" rel="stylesheet">
+	                  <link rel="shortcut icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+        <link rel="icon" href="https://i.imgur.com/i9rlfZ3.png" type="image/png">
+<style type="text/css">
+#header.shadow {
+    box-shadow: var(--card_shadow);
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+.wrapper {
+    width: 768px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+}
+#header-widget {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
+}
+#header-widget .widget.Header {
+    justify-content: left;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.w3schools.com/howto/searchicon.png');
+  background-position: 12px 14px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#header-widget #search {
+    width: 100%;
+    margin: auto;
+}
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: var(--white);
+    transition: box-shadow .1s;
+}
+input[type=text]:focus {
+  width: 100%;
+}
+#header-widget .widget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jumbotron {
+    background-size: cover;
+    padding: 7rem 1rem;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+        padding-left: 1rem;
+}
+.pl-0, .px-0 {
+    padding-left: 0 !important;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0 !important;
+}
+.pt-0, .py-0 {
+    padding-top: 0 !important;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+.tofront {
+    position: relative;
+    z-index: 1;
+}
+.h-100 {
+    height: 100% !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.align-self-center {
+    align-self: center !important;
+}
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.rounded {
+    border-radius: 0.25rem !important;
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+  outline: none;
+  background-color: black;
+}
+.article-headline {
+    font-family: Georgia,Times,"Times New Roman",serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #222222;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 84%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem; }
+  .badge:empty {
+    display: none; }
+
+.btn .badge {
+  position: relative;
+  top: -1px; }
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem; }
+
+.badge-primary {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-primary[href]:hover, .badge-primary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-secondary {
+  color: #fff;
+  background-color: #7832e2; }
+  .badge-secondary[href]:hover, .badge-secondary[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #5f1cc5; }
+
+.badge-success {
+  color: #fff;
+  background-color: #03a87c; }
+  .badge-success[href]:hover, .badge-success[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #027657; }
+
+.badge-info {
+  color: #212529;
+  background-color: #09ebaf; }
+  .badge-info[href]:hover, .badge-info[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #07ba8a; }
+
+.badge-warning {
+  color: #212529;
+  background-color: #ffde03; }
+  .badge-warning[href]:hover, .badge-warning[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #cfb400; }
+
+.badge-danger {
+  color: #fff;
+  background-color: #ea2f65; }
+  .badge-danger[href]:hover, .badge-danger[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d1154b; }
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa; }
+  .badge-light[href]:hover, .badge-light[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #dae0e5; }
+
+.badge-dark {
+  color: #fff;
+  background-color: #212529; }
+  .badge-dark[href]:hover, .badge-dark[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0a0c0d; }
+
+.badge-white {
+  color: #212529;
+  background-color: #fff; }
+  .badge-white[href]:hover, .badge-white[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #e6e6e6; }
+
+.badge-purple {
+  color: #fff;
+  background-color: #ad6edd; }
+  .badge-purple[href]:hover, .badge-purple[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #9645d3; }
+
+.badge-salmon {
+  color: #212529;
+  background-color: #ff977a; }
+  .badge-salmon[href]:hover, .badge-salmon[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #ff6f47; }
+
+.badge-cyan {
+  color: #212529;
+  background-color: #35bdff; }
+  .badge-cyan[href]:hover, .badge-cyan[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #02acff; }
+
+.badge-gray {
+  color: #212529;
+  background-color: #ced4da; }
+  .badge-gray[href]:hover, .badge-gray[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #b1bbc4; }
+
+.badge-indigo {
+  color: #fff;
+  background-color: #502c6c; }
+  .badge-indigo[href]:hover, .badge-indigo[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #351d48; }
+
+.badge-orange {
+  color: #212529;
+  background-color: #fbb500; }
+  .badge-orange[href]:hover, .badge-orange[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c89000; }
+
+.badge-lightblue {
+  color: #212529;
+  background-color: #e8f3ec; }
+  .badge-lightblue[href]:hover, .badge-lightblue[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #c6e2d0; }
+.container {
+	max-width: 1070px;
+}
+.pb-4, .py-4 {
+    padding-bottom: 1.5rem !important;
+}
+.pt-4, .py-4 {
+    padding-top: 1.5rem !important;
+}
+.spanborder {
+    border-bottom: 1px solid #e8f3ec;
+    margin-bottom: 2rem;
+}
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+</style>
+	<title>Zeus News</title>
+	<!-- Head tag Code --></head>
+<body>
+<!-- header -->
+	<header id="header" class="shadow">
+<div class="wrapper">
+<div class="header-widget section" id="header-widget" name="#header-widget">
+<div class="widget Header" data-version="2" id="Header1">
+<div id="logo">
+<a href="/" title="Zeus News">
+<img alt="Zeus News" src="https://lh3.googleusercontent.com/-QUTJuckOGQw/Yazw2hUZUjI/AAAAAAAAAgk/IUP2mZ3TwQ4Egj3i8jmK8uq7b-hf0ECqACNcBGAsYHQ/w100-h100-p-k-no-nu/logo.png" width="40" height="40">
+</a>
+</div>
+</div>
+<div class="widget Label" data-version="2" id="Label1">
+<div id="search">
+<form action="/" method="get">
+  <input type="text" name="q" placeholder="Search.." aria-label="Search">
+</form>
+			  </div>
+			  </div>
+			  </div>
+			  			  			  <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between" style="background-color:#fff; border-t:1px solid #e5e5e5">
+		    <a class="p-2 text-muted" href="/p/about.html">About</a>
+			<a class="p-2 text-muted" href="/p/contact.html">Contact</a>
+			<a class="p-2 text-muted" href="/p/dmca.html">DMCA</a>
+			<a class="p-2 text-muted" href="/p/privacy-policy.html">Privacy Policy</a>
+			<a class="p-2 text-muted" href="/p/copyright.html">Copyright</a>
+			</nav>
+			</div>
+			  </div>
+			  </header>
+			  <div class="container">
+<div class="row mb-2">
+							<div class="col-sm-12 p-2">
+											</div> 
+		  <article>
+									 
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/latihan-soal-matematika-kelas-4.html">Latihan Soal Matematika Kelas 4</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Latihan Soal Matematika Kelas 4 gambar artikel tersedia di website.
+				Latihan Soal Matematika Kelas 4 adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/latihan-soal-matematika-kelas-4.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://imgv2-1-f.scribdassets.com/img/document/310456033/original/c0a4f6daa7/1634584571?v=1" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Latihan Soal Matematika Kelas 4">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/populasi-provinsi-indonesia.html">Populasi Provinsi Indonesia</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Populasi Provinsi Indonesia gambar artikel tersedia di website.
+				Populasi Provinsi Indonesia adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/populasi-provinsi-indonesia.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/01/23/2631492978.png" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Populasi Provinsi Indonesia">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/kunci-jawaban-semester.html">Kunci Jawaban Semester</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Kunci Jawaban Semester gambar artikel tersedia di website.
+				Kunci Jawaban Semester adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/kunci-jawaban-semester.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://1.bp.blogspot.com/-FJ4XK4Z8esQ/XyIdm9EIFcI/AAAAAAAACO8/FR3wLzsqjj0P_rGFee4-C7EuHyvHV-GdACLcBGAsYHQ/s640/cover%2Bkunci%2Bjawaban%2Bdrs%2Bsunardi.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Kunci Jawaban Semester">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/washington-state-modern-firearm-elk-season-2021.html">Washington State Modern Firearm Elk Season 2021</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Washington State Modern Firearm Elk Season 2021 gambar artikel tersedia di website.
+				Washington State Modern Firearm Elk Season 2021 adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/washington-state-modern-firearm-elk-season-2021.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://pcdn.columbian.com/wp-content/uploads/2017/10/1005_SPT_deer1-1226x0-c-default.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Washington State Modern Firearm Elk Season 2021">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/latihan-soal-vektor-sma-kelas-10.html">Latihan Soal Vektor Sma Kelas 10</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Latihan Soal Vektor Sma Kelas 10 gambar artikel tersedia di website.
+				Latihan Soal Vektor Sma Kelas 10 adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/latihan-soal-vektor-sma-kelas-10.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://i0.wp.com/imgv2-1-f.scribdassets.com/img/document/156966537/original/cef1bee995/1560952866?v=1?resize=91,91" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Latihan Soal Vektor Sma Kelas 10">
+			</div>
+			</div>
+			</div>
+			
+				
+				 
+		 
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/kurs-dolara.html">Kurs Dolara</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Kurs Dolara gambar artikel tersedia di website.
+				Kurs Dolara adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/kurs-dolara.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://bi.im-g.pl/im/3a/7e/1a/z27779130IER,Kursy-walut--zdjecie-ilustracyjne.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Kurs Dolara">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/video-yang-lagi-viral-di-media-sosial-2021-terbaru.html">Video Yang Lagi Viral Di Media Sosial 2021 Terbaru</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Video Yang Lagi Viral Di Media Sosial 2021 Terbaru gambar artikel tersedia di website.
+				Video Yang Lagi Viral Di Media Sosial 2021 Terbaru adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/video-yang-lagi-viral-di-media-sosial-2021-terbaru.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://ilmumu.com/wp-content/uploads/2021/02/1612936176381-485x1024.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Video Yang Lagi Viral Di Media Sosial 2021 Terbaru">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/semeruco-venezuela.html">Semeruco Venezuela</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Semeruco Venezuela gambar artikel tersedia di website.
+				Semeruco Venezuela adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/semeruco-venezuela.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=3178906075455157" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Semeruco Venezuela">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/latihan-soal-cpns-gratis.html">Latihan Soal Cpns Gratis</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Latihan Soal Cpns Gratis gambar artikel tersedia di website.
+				Latihan Soal Cpns Gratis adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/latihan-soal-cpns-gratis.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			lgwgB0yV-tABTM" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Latihan Soal Cpns Gratis">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/kunci-jawaban-kelas-3-halaman-23.html">Kunci Jawaban Kelas 3 Halaman 23</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Kunci Jawaban Kelas 3 Halaman 23 gambar artikel tersedia di website.
+				Kunci Jawaban Kelas 3 Halaman 23 adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/kunci-jawaban-kelas-3-halaman-23.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2021/09/11/3925589586.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Kunci Jawaban Kelas 3 Halaman 23">
+			</div>
+			</div>
+			</div>
+			
+				
+				 
+		 
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/letak-wilayah-indonesia.html">Letak Wilayah Indonesia</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Letak Wilayah Indonesia gambar artikel tersedia di website.
+				Letak Wilayah Indonesia adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/letak-wilayah-indonesia.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://sumberbelajar.belajar.kemdikbud.go.id/file_storage/t2017/k42_1787/media/images/jalur%20perdagangan.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Letak Wilayah Indonesia">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/wa-gb-pro-terbaru-2021.html">Wa Gb Pro Terbaru 2021</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Wa Gb Pro Terbaru 2021 gambar artikel tersedia di website.
+				Wa Gb Pro Terbaru 2021 adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/wa-gb-pro-terbaru-2021.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://img.youtube.com/vi/o8dAFqYA-HQ/sddefault.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Wa Gb Pro Terbaru 2021">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/latihan-soal-utbk-gratis.html">Latihan Soal Utbk Gratis</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Latihan Soal Utbk Gratis gambar artikel tersedia di website.
+				Latihan Soal Utbk Gratis adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/latihan-soal-utbk-gratis.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=103619844925986" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Latihan Soal Utbk Gratis">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/pancasila-1-5-artinya.html">Pancasila 1 5 Artinya</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Pancasila 1 5 Artinya gambar artikel tersedia di website.
+				Pancasila 1 5 Artinya adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/pancasila-1-5-artinya.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://imgv2-1-f.scribdassets.com/img/document/443373766/original/bd8c6ce517/1636548030?v=1" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Pancasila 1 5 Artinya">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/web-latihan-soal-online.html">Web Latihan Soal Online</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Web Latihan Soal Online gambar artikel tersedia di website.
+				Web Latihan Soal Online adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/web-latihan-soal-online.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://cdn.extramarks.id/web/images/website_v7/kp-soal-fitur-4.png" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Web Latihan Soal Online">
+			</div>
+			</div>
+			</div>
+			
+				
+				 
+		 
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/peringkat-indonesia-sepak-bola-dunia.html">Peringkat Indonesia Sepak Bola Dunia</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Peringkat Indonesia Sepak Bola Dunia gambar artikel tersedia di website.
+				Peringkat Indonesia Sepak Bola Dunia adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/peringkat-indonesia-sepak-bola-dunia.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2021/08/20/2961880457.png" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Peringkat Indonesia Sepak Bola Dunia">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/latihan-online-soal-un-bahasa-indonesia-sma.html">Latihan Online Soal Un Bahasa Indonesia Sma</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Latihan Online Soal Un Bahasa Indonesia Sma gambar artikel tersedia di website.
+				Latihan Online Soal Un Bahasa Indonesia Sma adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/latihan-online-soal-un-bahasa-indonesia-sma.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://contoh123.com/wp-content/uploads/2021/04/SOALBHSINDONESIASMA2019_2020.png" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Latihan Online Soal Un Bahasa Indonesia Sma">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/latihan-soal-smart-gma-verbal.html">Latihan Soal Smart Gma Verbal</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Latihan Soal Smart Gma Verbal gambar artikel tersedia di website.
+				Latihan Soal Smart Gma Verbal adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/latihan-soal-smart-gma-verbal.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://i.pinimg.com/474x/8e/25/82/8e258280d228a6f2eda43233d1721cda.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Latihan Soal Smart Gma Verbal">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/wa-modern-elk-season.html">Wa Modern Elk Season</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Wa Modern Elk Season gambar artikel tersedia di website.
+				Wa Modern Elk Season adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/wa-modern-elk-season.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://thumb.spokesman.com/3nNoqQ25jLcKSkOrjPDi-dVrFlg=/810x0/media.spokesman.com/photos/2010/10/17/out17_elk.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Wa Modern Elk Season">
+			</div>
+			</div>
+			</div>
+			
+				
+														
+					<div class="row mb-2">
+					<div class="col-md-6" style="    flex: 100%;
+    max-width: 100%;">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+			<h3 class="mb-0">
+                <a class="text-dark" href="/kunci-jawaban-soal-prakerja.html">Kunci Jawaban Soal Prakerja</a>
+              </h3>
+			  																			  <div class="mb-1 text-muted">Post by. Nurul Safirah</div>
+				<p class="card-text mb-auto">
+				Kunci Jawaban Soal Prakerja gambar artikel tersedia di website.
+				Kunci Jawaban Soal Prakerja adalah topik yang sedang ramai dan paling banyak dicari oleh netizen.
+				Kamu dapat menemukan</p>
+			<a href="/kunci-jawaban-soal-prakerja.html">Continue Reading</a>
+			</div>
+			<img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 200px; height: 250px;" src="
+			https://www.pemburukuis.com/wp-content/uploads/2020/08/pertanyaan-prakerja.jpg" onerror="this.onerror=null;this.src='
+Notice: Undefined variable: img_thumb in C:\xampp\htdocs\shuriken\cache\d21a44693cc1e760991b10cb20f437e779cb03a6.php on line 39
+';" alt="Kunci Jawaban Soal Prakerja">
+			</div>
+			</div>
+			</div>
+			
+				
+				 
+		 
+		
+						</article>
+						</div>
+				
+<!-- sidebar -->
+
+		<!-- Back to top button -->
+<button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+		</div>	
+<footer class="blog-footer">
+				<div class="col-md-12 text-center">
+			<a href="/">Zeus News</a> Copyright 2022
+			<p>Developed by. Anak Kembar</p>
+				</div>
+			</footer>
+		
+	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<center>
+    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4610097,4,107,170,20,00011000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4610097&101" alt="web page hit counter" border="0"></a></noscript>
+<!-- Histats.com  END  --> </center>	
+		<script type="text/javascript">
+		$(document).ready(function()
+		{
+		  $('body').addClass('xepo_ads');
+		});
+
+		$(document).on('click','.xepo_ads',function(e)
+		{
+		    $(this).removeClass('xepo_ads');
+		    window.open('https://affairsmithbloke.com/fxuqmwvy91?key=e840e938813350bc4bfe6916b8475137', '_blank');
+		});
+	</script>
+	
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function()
+	    {
+			$(document).on('click','#image-download',function(e)
+			{
+				e.preventDefault();
+				var url = $(this).data('url');
+				var title = $(this).data('title');			
+				var x=new XMLHttpRequest();
+				x.open( "GET", url , true);
+				x.responseType="blob";
+				x.onload= function(e){download(e.target.response, title, "image/jpg");};
+				x.send();
+			});
+	    });
+	</script>
+		<script type='text/javascript' src='//affairsmithbloke.com/6c/92/a0/6c92a0d5d0774d5ef72ef42731cff37d.js'></script>
+	    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. <strong><a href="privacy-policy.html">Learn More</a</strong>,
+            "dismiss": "Accept",
+            "learnMore": "More Information",
+            "theme": "dark-bottom"
+        };
+    </script>
+	<script>
+	//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}</script>
+</body>
+</html>
